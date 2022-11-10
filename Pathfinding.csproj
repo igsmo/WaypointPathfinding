@@ -12,6 +12,13 @@
 	<RepositoryUrl>https://github.com/igsmo/pathfinding_waypointmap</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	  <Description>
+		  This repository allows a user to pathfind using various algorithms using a graph data structure (called WaypointMap in the application, a node is called WaypointNode).
+
+		  Currently supports only Dijkstra algorithm (only relative posiitons, no absolute ones necessary for A*).
+
+		  https://www.nuget.org/packages/WaypointPathfinding/
+	  </Description>
   </PropertyGroup>
 
   <ItemGroup>
