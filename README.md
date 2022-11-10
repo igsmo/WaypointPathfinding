@@ -45,3 +45,24 @@ foreach(var node in path)
     Console.WriteLine(node.Id);
 }
 ```
+
+The WaypointMapParser class contains useful formats to parse different formats into WaypointMap. 
+Currently only supports parsing from a list of strings. Usage:
+```
+using Pathfinding;
+
+var mapFromArray = WaypointMapParser.ParseArrayOfStrings(new List<string> { 
+    "1;[2,5];[5.1,2.2]",
+    "2;[1];[5.1]",
+    "5;[1];[2.2]"
+});
+
+foreach (WaypointNode node in mapFromArray.Waypoints)
+{
+    Console.WriteLine("CONNECTIONS FOR" + node.Id.ToString());
+    foreach (var kvp in node.ConnectionsAndDistances)
+    {
+        Console.WriteLine("Conn id=" + kvp.Key.Id + "has distance " + kvp.Value);
+    }
+}
+```

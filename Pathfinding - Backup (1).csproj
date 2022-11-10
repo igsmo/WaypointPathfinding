@@ -17,9 +17,9 @@ This repository allows a user to pathfind using various algorithms using a graph
 
 Currently supports only Dijkstra algorithm (only relative posiitons, no absolute ones necessary for A*).
 
-https://www.nuget.org/packages/WaypointPathfinding/
+		  https://www.nuget.org/packages/WaypointPathfinding/
 	  </Description>
-	  <Version>1.1.0</Version>
+	  <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
