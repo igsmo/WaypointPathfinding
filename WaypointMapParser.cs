@@ -3,7 +3,7 @@
 namespace WaypointPathfinding;
 
 
-static class WaypointMapParser
+public static class WaypointMapParser
 {
     /// <summary>
     /// Parses a table in a form of an array of string to a WaypointMap.
