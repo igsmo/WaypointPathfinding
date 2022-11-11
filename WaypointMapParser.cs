@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 
-namespace Pathfinding;
+namespace WaypointPathfinding;
+
 
 static class WaypointMapParser
 {

@@ -1,6 +1,6 @@
-﻿namespace Pathfinding;
+﻿namespace WaypointPathfinding;
 
-class WaypointMap
+public class WaypointMap
 {
     private List<WaypointNode> _waypoints;
     private List<int> _waypointIds;

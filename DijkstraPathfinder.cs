@@ -1,6 +1,6 @@
-﻿namespace Pathfinding;
+﻿namespace WaypointPathfinding;
 
-class DijkstraPathfinder
+public class DijkstraPathfinder
 {
     private WaypointMap _map;
     int _v;

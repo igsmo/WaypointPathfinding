@@ -1,6 +1,6 @@
-﻿namespace Pathfinding;
+﻿namespace WaypointPathfinding;
 
-class WaypointNode
+public class WaypointNode
 {
     private IDictionary<WaypointNode, float> _connectionsAndDistances;
     private int _id;
