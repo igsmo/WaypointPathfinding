@@ -9,7 +9,7 @@
     <Authors>Igor Smorag</Authors>
     <Company />
     <PackageTags>pathfinding;dijkstra;node;graph;</PackageTags>
-	<RepositoryUrl>https://github.com/igsmo/pathfinding_waypointmap</RepositoryUrl>
+	<RepositoryUrl>https://github.com/igsmo/WaypointPathfinding</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 	  <Description>
@@ -20,6 +20,7 @@ Currently supports only Dijkstra algorithm (only relative posiitons, no absolute
 https://www.nuget.org/packages/WaypointPathfinding/
 	  </Description>
 	  <Version>1.1.3</Version>
+	  <PackageOutputPath>bin\Release\</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

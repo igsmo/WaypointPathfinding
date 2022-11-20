@@ -20,7 +20,6 @@ public class DijkstraPathfinder
     public DijkstraPathfinder(WaypointMap map)
 	{
         _map = map;
-        _v = _map.Waypoints.Count;
         _graph = _map.GetAdjacencyMatrix();
     }
 
