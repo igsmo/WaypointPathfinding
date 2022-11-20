@@ -2,13 +2,21 @@
 
 public class DijkstraPathfinder
 {
-    private WaypointMap _map;
-    int _v;
-    float[,] _graph;
-
     private static readonly int NO_PARENT = -1;
 
+    /// <summary>
+    /// <see cref="WaypointMap"/> representation of the map used for Dijsktra calculations.
+    /// </summary>
+    private WaypointMap _map;
+    /// <summary>
+    /// Graph representation of the <see cref="WaypointMap"/>.
+    /// </summary>
+    private float[,] _graph;
 
+    /// <summary>
+    /// Constructor for <see cref="DijkstraPathfinder"/>.
+    /// </summary>
+    /// <param name="map"><see cref="WaypointMap"/> representation of the map used for Dijsktra calculations.</param>
     public DijkstraPathfinder(WaypointMap map)
 	{
         _map = map;
@@ -16,11 +24,12 @@ public class DijkstraPathfinder
         _graph = _map.GetAdjacencyMatrix();
     }
 
-    // Function that implements Dijkstra's
-    // single source shortest path
-    // algorithm for a graph represented
-    // using adjacency matrix
-    // representation
+    /// <summary>
+    /// Calculates the path using Dijkstra algorithm.
+    /// </summary>
+    /// <param name="startNode">A <see cref="WaypointNode"/> to start from.</param>
+    /// <param name="endNode">A <see cref="WaypointNode"/> to finish at.</param>
+    /// <returns>A list of <see cref="WaypointNode"/>s representation of the path.</returns>
     public List<WaypointNode> GetPath(WaypointNode startNode, WaypointNode endNode)
     {
         int startVertex = startNode.Id;
@@ -110,12 +119,19 @@ public class DijkstraPathfinder
         return GetWaypointPathFromParents(startNode, endNode, parents);
     }
 
-
+    /// <summary>
+    /// Converts Dijkstra table result to a list of <see cref="WaypointNode"/>s representation of the path.
+    /// </summary>
+    /// <param name="startNode">A <see cref="WaypointNode"/> to start from.</param>
+    /// <param name="endNode">A <see cref="WaypointNode"/> to finish at.</param>
+    /// <param name="parentIds">The Dijkstra's table representation with the distances to nodes.</param>
+    /// <returns>A list of <see cref="WaypointNode"/>s representation of the path.</returns>
     private List<WaypointNode> GetWaypointPathFromParents(WaypointNode startNode, WaypointNode endNode, int[] parentIds)
     {
         int currentId = endNode.Id;
         List<WaypointNode> result = new List<WaypointNode>() {  };
         
+        // Travels backwards from the end to start of the Dijkstra's table and adds WaypointNodes.
         while (parentIds[currentId] != NO_PARENT)
         {
             result.Add(_map.Waypoints.Find(x => x.Id == currentId));

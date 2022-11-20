@@ -19,7 +19,7 @@ Currently supports only Dijkstra algorithm (only relative posiitons, no absolute
 
 https://www.nuget.org/packages/WaypointPathfinding/
 	  </Description>
-	  <Version>1.1.2</Version>
+	  <Version>1.1.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
