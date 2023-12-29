@@ -138,11 +138,11 @@ public class WaypointMap
     public float[,] GetAdjacencyMatrix()
     {
         // Get size of the adjacency matrix and initialize to 0s
-        int lastId = _waypointIds.Max();
+        int lastId = _waypointIds.Max() + 1;
         float[,] result = new float[lastId, lastId];
-        for(int i = 0; i <= lastId; i++)
+        for(int i = 0; i < lastId; i++)
         {
-            for (int j = 0; j <= lastId; j++)
+            for (int j = 0; j < lastId; j++)
             {
                 result[i, j] = 0;
             }
